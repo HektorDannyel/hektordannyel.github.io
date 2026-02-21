@@ -6,5 +6,6 @@ img: assets/img/quality_of_life.jpg
 importance: 1
 category: Consultoria
 related_publications: false
-external_url: /reports/qualidade_de_vida.html
+external_url: "{{ '/reports/qualidade_de_vida.html' | relative_url }}"
 ---
+
