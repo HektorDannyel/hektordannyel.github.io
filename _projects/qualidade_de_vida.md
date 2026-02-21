@@ -6,6 +6,6 @@ img: assets/img/quality_of_life.jpg
 importance: 1
 category: Consultoria
 related_publications: false
-external_url: https://hektordannyel.github.io/projects/reports/qualidade_de_vida
+redirect: https://hektordannyel.github.io/projects/reports/qualidade_de_vida
 ---
 
