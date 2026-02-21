@@ -8,14 +8,12 @@ nav_order: 3
 calendar: true
 ---
 
-Em um projeto de pesquisa científica, a parte estatística pode, facilmente, ser a maior dor de cabeça. Muitos cálculos, muitos conceitos, muitos detalhes. 
-
-Mas nem tudo está perdido. Entre em contato comigo através do meu <a href="mailto:hektor.brasil@gmail.com">email</a> ou <a href="https://wa.me/5541991777188">WhatsApp</a> e vamos conversar sobre como resolver seu problema.
+Eu ofereço serviços de consultoria estatística para pesquisa acadêmica, de todos os tipos e para todas as áreas. Se o seu projeto de pesquisa precisa validar testes de hipótese para ser o *crème de la crème*, entre em contato comigo através do meu <a href="mailto:hektor.brasil@gmail.com">email</a> ou <a href="https://wa.me/5541991777188">WhatsApp</a> e vamos conversar sobre como eu posso te ajudar.
 
 <div class="cards">
     <div class="card">
         <div class="card-header">
-            Tipos de trabalho
+            Níveis de trabalho
         </div>
         <div class="card-body">
             <ul>
@@ -42,7 +40,7 @@ Mas nem tudo está perdido. Entre em contato comigo através do meu <a href="mai
                 <li>Machine Learning</li>
                 <li>Relatórios dinâmicos (RMarkdown, Quarto)</li>
                 <li>Apps e dashboards em Shiny</li>
-                <li>Muitos outros!</li>
+                <li>Muitas outros!</li>
             </ul>
         </div>
     </div>

@@ -1,11 +1,11 @@
 ---
 layout: page
 title: Projetos
-permalink: /projects/
-description: A growing collection of your cool projects.
+permalink: /projetos/
+description: Projetos acadêmicos que participei.
 nav: true
 nav_order: 2
-display_categories: [work, fun]
+display_categories: [Consultoria, Minha autoria]
 horizontal: false
 ---
 
