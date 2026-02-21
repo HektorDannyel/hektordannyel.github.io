@@ -53,6 +53,12 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
 // Profile
 
 .profile {
