@@ -27,7 +27,6 @@ Mas nem tudo está perdido. Entre em contato comigo através do meu <a href="mai
             </ul>
         </div>
     </div>
-    <div>
     <div class="card">
         <div class="card-header">
             Catálogo de Técnicas Estatísticas
@@ -43,10 +42,8 @@ Mas nem tudo está perdido. Entre em contato comigo através do meu <a href="mai
                 <li>Machine Learning</li>
                 <li>Relatórios dinâmicos (RMarkdown, Quarto)</li>
                 <li>Apps e dashboards em Shiny</li>
-                <li>Muitos outros!>
+                <li>Muitos outros!</li>
             </ul>
         </div>
-    </div>
-    <div>
     </div>
 </div>
