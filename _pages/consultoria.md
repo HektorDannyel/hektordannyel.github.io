@@ -40,7 +40,7 @@ Eu ofereço serviços de consultoria estatística para pesquisa acadêmica, de t
                 <li>Machine Learning</li>
                 <li>Relatórios dinâmicos (RMarkdown, Quarto)</li>
                 <li>Apps e dashboards em Shiny</li>
-                <li>Muitas outros!</li>
+                <li>Muitas outras!</li>
             </ul>
         </div>
     </div>
