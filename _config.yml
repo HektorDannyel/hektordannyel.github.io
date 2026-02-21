@@ -9,14 +9,14 @@ last_name: Brasil
 contact_note: >
   Clique no ícone de WhatsApp ou e-mail para falar comigo!
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Portfolio profissional e serviços de consultoria estatística.
+  Site dedicado ao meu portfolio profissional e serviços de consultoria estatística.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
   Não há guerra em Ba Sing Se.
 keywords: statistics, estatistica, trabalho-academico, artigo, p-valor, teste-de-hipotese # add your own keywords or leave empty
 lang: pt # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: prof_pic.jpg # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: 📊 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://hektordannyel.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
@@ -54,8 +54,8 @@ external_services:
 # -----------------------------------------------------------------------------
 
 navbar_fixed: true
-footer_fixed: false
-search_enabled: false
+footer_fixed: true
+search_enabled: true
 socials_in_search: true
 posts_in_search: true
 bib_search: true
