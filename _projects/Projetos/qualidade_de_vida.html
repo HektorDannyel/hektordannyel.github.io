@@ -1,0 +1,3861 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Qualidade de Vida</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="qualidade_de_vida_files/libs/clipboard/clipboard.min.js"></script>
+<script src="qualidade_de_vida_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="qualidade_de_vida_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="qualidade_de_vida_files/libs/quarto-html/popper.min.js"></script>
+<script src="qualidade_de_vida_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="qualidade_de_vida_files/libs/quarto-html/anchor.min.js"></script>
+<link href="qualidade_de_vida_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="qualidade_de_vida_files/libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="qualidade_de_vida_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="qualidade_de_vida_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="qualidade_de_vida_files/libs/bootstrap/bootstrap-bb462d781dde1847d9e3ccf7736099dd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<style>
+
+      .quarto-title-block .quarto-title-banner {
+        background: #2F5597;
+      }
+</style>
+<script src="qualidade_de_vida_files/libs/kePrint-0.0.1/kePrint.js"></script>
+
+<link href="qualidade_de_vida_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="quarto-light">
+
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-right">
+      <h1 class="title">Qualidade de Vida</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page-right">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-full toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução">Introdução</a></li>
+  <li><a href="#análise-descritiva-dos-dados" id="toc-análise-descritiva-dos-dados" class="nav-link" data-scroll-target="#análise-descritiva-dos-dados">Análise descritiva dos dados</a>
+  <ul class="collapse">
+  <li><a href="#transplantados-versus-sobreviventes" id="toc-transplantados-versus-sobreviventes" class="nav-link" data-scroll-target="#transplantados-versus-sobreviventes">Transplantados <em>versus</em> sobreviventes</a></li>
+  <li><a href="#resumo-dos-dados" id="toc-resumo-dos-dados" class="nav-link" data-scroll-target="#resumo-dos-dados">Resumo dos dados</a>
+  <ul class="collapse">
+  <li><a href="#tempo" id="toc-tempo" class="nav-link" data-scroll-target="#tempo">Tempo</a></li>
+  <li><a href="#imc" id="toc-imc" class="nav-link" data-scroll-target="#imc">IMC</a></li>
+  <li><a href="#meld" id="toc-meld" class="nav-link" data-scroll-target="#meld">MELD</a></li>
+  <li><a href="#tempo-de-cirurgia" id="toc-tempo-de-cirurgia" class="nav-link" data-scroll-target="#tempo-de-cirurgia">Tempo de Cirurgia</a></li>
+  <li><a href="#tempo-de-isquemia" id="toc-tempo-de-isquemia" class="nav-link" data-scroll-target="#tempo-de-isquemia">Tempo de Isquemia</a></li>
+  <li><a href="#tempo-de-internamento" id="toc-tempo-de-internamento" class="nav-link" data-scroll-target="#tempo-de-internamento">Tempo de internamento</a></li>
+  </ul></li>
+  <li><a href="#variáveis-categóricas" id="toc-variáveis-categóricas" class="nav-link" data-scroll-target="#variáveis-categóricas">Variáveis categóricas</a>
+  <ul class="collapse">
+  <li><a href="#gênero-e-tipo-sanguíneo" id="toc-gênero-e-tipo-sanguíneo" class="nav-link" data-scroll-target="#gênero-e-tipo-sanguíneo">Gênero e tipo sanguíneo</a></li>
+  <li><a href="#child-pugh" id="toc-child-pugh" class="nav-link" data-scroll-target="#child-pugh">Child-Pugh</a></li>
+  <li><a href="#etiologia" id="toc-etiologia" class="nav-link" data-scroll-target="#etiologia">Etiologia</a></li>
+  <li><a href="#comorbidades-preexistentes" id="toc-comorbidades-preexistentes" class="nav-link" data-scroll-target="#comorbidades-preexistentes">Comorbidades preexistentes</a></li>
+  <li><a href="#complicações-da-cirrose" id="toc-complicações-da-cirrose" class="nav-link" data-scroll-target="#complicações-da-cirrose">Complicações da Cirrose</a></li>
+  <li><a href="#comorbidades-subsequentes" id="toc-comorbidades-subsequentes" class="nav-link" data-scroll-target="#comorbidades-subsequentes">Comorbidades subsequentes</a></li>
+  <li><a href="#transfusão" id="toc-transfusão" class="nav-link" data-scroll-target="#transfusão">Transfusão</a></li>
+  <li><a href="#complicações-agudas" id="toc-complicações-agudas" class="nav-link" data-scroll-target="#complicações-agudas">Complicações Agudas</a></li>
+  <li><a href="#necessidade-de-reoperação" id="toc-necessidade-de-reoperação" class="nav-link" data-scroll-target="#necessidade-de-reoperação">Necessidade de reoperação</a></li>
+  <li><a href="#complicações-tardias" id="toc-complicações-tardias" class="nav-link" data-scroll-target="#complicações-tardias">Complicações tardias</a></li>
+  <li><a href="#rejeição" id="toc-rejeição" class="nav-link" data-scroll-target="#rejeição">Rejeição</a></li>
+  <li><a href="#retransplante" id="toc-retransplante" class="nav-link" data-scroll-target="#retransplante">Retransplante</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#índices-de-qualidade-de-vida" id="toc-índices-de-qualidade-de-vida" class="nav-link" data-scroll-target="#índices-de-qualidade-de-vida">Índices de Qualidade de Vida</a>
+  <ul class="collapse">
+  <li><a href="#resultados-do-questionário-aplicado-aos-transplantados" id="toc-resultados-do-questionário-aplicado-aos-transplantados" class="nav-link" data-scroll-target="#resultados-do-questionário-aplicado-aos-transplantados">Resultados do questionário aplicado aos transplantados</a>
+  <ul class="collapse">
+  <li><a href="#resumo" id="toc-resumo" class="nav-link" data-scroll-target="#resumo">Resumo</a></li>
+  <li><a href="#qualidade-de-vida-vs-idade" id="toc-qualidade-de-vida-vs-idade" class="nav-link" data-scroll-target="#qualidade-de-vida-vs-idade">Qualidade de vida VS Idade</a></li>
+  <li><a href="#qualidade-de-vida-vs-gênero" id="toc-qualidade-de-vida-vs-gênero" class="nav-link" data-scroll-target="#qualidade-de-vida-vs-gênero">Qualidade de Vida vs Gênero</a></li>
+  <li><a href="#qualidade-de-vida-vs-complicações-tardias" id="toc-qualidade-de-vida-vs-complicações-tardias" class="nav-link" data-scroll-target="#qualidade-de-vida-vs-complicações-tardias">Qualidade de Vida vs Complicações Tardias</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+</div>
+<main class="content quarto-banner-title-block column-page-right" id="quarto-document-content">
+
+
+
+
+
+<section id="introdução" class="level1">
+<h1>Introdução</h1>
+<p>Em um hospital da região Sul do Brasil, entre os anos de 1991 e 2009, 353 pacientes realizaram transplante de fígado cadavérico. Anos após a realização do transplante, esses pacientes foram procurados e tiveram sua qualidade de vida avaliada. Este estudo de caso busca analisar o perfil clínico desses pacientes, de acordo com os dados obtidos em prontuário, e comparar sua qualidade de vida com índices nacionais e regionais da época.</p>
+</section>
+<section id="análise-descritiva-dos-dados" class="level1">
+<h1>Análise descritiva dos dados</h1>
+<section id="transplantados-versus-sobreviventes" class="level2">
+<h2 class="anchored" data-anchor-id="transplantados-versus-sobreviventes">Transplantados <em>versus</em> sobreviventes</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="qualidade_de_vida_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>De um total de 353 transplantados, apenas 93 (26.3%) ainda se encontravam vivos no momento do estudo. A mortalidade média por ano é de 32%.</p>
+</section>
+<section id="resumo-dos-dados" class="level2">
+<h2 class="anchored" data-anchor-id="resumo-dos-dados">Resumo dos dados</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Variável</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Média</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Desvio Padrão</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Mediana</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Mínimo</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Máximo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Idade hoje</td>
+<td style="text-align: center;">57.84</td>
+<td style="text-align: center;">15.58</td>
+<td style="text-align: center;">57</td>
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">100</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Idade no transplante</td>
+<td style="text-align: center;">41.03</td>
+<td style="text-align: center;">14.99</td>
+<td style="text-align: center;">41</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">78</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Tempo para seguimento (Anos)</td>
+<td style="text-align: center;">16.81</td>
+<td style="text-align: center;">3.70</td>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">26</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">IMC</td>
+<td style="text-align: center;">24.46</td>
+<td style="text-align: center;">4.50</td>
+<td style="text-align: center;">24.50</td>
+<td style="text-align: center;">14.30</td>
+<td style="text-align: center;">40.10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Score MELD</td>
+<td style="text-align: center;">17.13</td>
+<td style="text-align: center;">5.78</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">40</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Tempo de operação - Minutos</td>
+<td style="text-align: center;">398.45</td>
+<td style="text-align: center;">106.95</td>
+<td style="text-align: center;">360</td>
+<td style="text-align: center;">240</td>
+<td style="text-align: center;">690</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Tempo de isquemia - Horas</td>
+<td style="text-align: center;">6.88</td>
+<td style="text-align: center;">2.89</td>
+<td style="text-align: center;">6.33</td>
+<td style="text-align: center;">1.33</td>
+<td style="text-align: center;">13.75</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Tempo de internamento UTI - Dias</td>
+<td style="text-align: center;">5.64</td>
+<td style="text-align: center;">7.93</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">48</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Tempo de internamento Total - Dias</td>
+<td style="text-align: center;">17.71</td>
+<td style="text-align: center;">13.26</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">84</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<section id="tempo" class="level3">
+<h3 class="anchored" data-anchor-id="tempo">Tempo</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="qualidade_de_vida_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Podemos observar boa simetria nos três gráficos referentes ao tempo, evidenciado também pela baixa diferença da média e da mediana na tabela. Os pacientes estão bem distribuídos com relação às suas idades no transplante.</p>
+</section>
+<section id="imc" class="level3">
+<h3 class="anchored" data-anchor-id="imc">IMC</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="qualidade_de_vida_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Categoria de IMC</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Faixa</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Total</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Abaixo do peso</td>
+<td style="text-align: center;">Abaixo de 18.5</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">9.30%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Eutrófico</td>
+<td style="text-align: center;">18.5 - 24.9</td>
+<td style="text-align: center;">42</td>
+<td style="text-align: center;">48.84%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Sobrepeso</td>
+<td style="text-align: center;">25 - 29.9</td>
+<td style="text-align: center;">28</td>
+<td style="text-align: center;">32.56%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Obesidade grau I</td>
+<td style="text-align: center;">30 - 34.9</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">6.98%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Obesidade grau II</td>
+<td style="text-align: center;">35 - 39.9</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1.16%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Obesidade grau III</td>
+<td style="text-align: center;">40 ou mais</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1.16%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>Observando tanto o gráfico quanto a tabela, temos que 90.70% dos pacientes se encontram no máximo em Sobrepeso, e 48.84% estão na faixa ideal de peso.</p>
+</section>
+<section id="meld" class="level3">
+<h3 class="anchored" data-anchor-id="meld">MELD</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="qualidade_de_vida_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="480"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>A distribuição do MELD mostra que 75% dos transplantados tiveram o Score até 19 pontos. Somente 2 (2.15%) pacientes tiveram Score acima de 30. Excluindo os outliers, a distribuição dos valores se mostra simétrica.</p>
+</section>
+<section id="tempo-de-cirurgia" class="level3">
+<h3 class="anchored" data-anchor-id="tempo-de-cirurgia">Tempo de Cirurgia</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="qualidade_de_vida_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="480"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>É interessante notar que 50% das cirurgias tiveram até 360 minutos de cirurgia, com uma amplitude de 120 minutos entre a mediana e o valor mínimo. Os demais 50% estão mais dispersos, com uma amplitude de 330 minutos entre o valor máximo e a mediana.</p>
+</section>
+<section id="tempo-de-isquemia" class="level3">
+<h3 class="anchored" data-anchor-id="tempo-de-isquemia">Tempo de Isquemia</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="qualidade_de_vida_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="480"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>O tempo de isquemia está bem distribuído, de acordo com os valores obtidos. Não há valores discrepantes relevantes, e pode-se observar pouca simetria.</p>
+</section>
+<section id="tempo-de-internamento" class="level3">
+<h3 class="anchored" data-anchor-id="tempo-de-internamento">Tempo de internamento</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="qualidade_de_vida_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>No geral, o tempo de internação dos pacientes, tanto de internação geral quanto em UTI, foi baixo. 75% dos transplantados tiveram tempo de internação de até 20 dias, aproximadamente. Na UTI, a mesma proporção de pacientes teve em média 6 dias de internamento. Considerando os <em>outliers</em>, há transplantados que atingiram 48 dias de UTI e 84 dias no internamento geral.</p>
+</section>
+</section>
+<section id="variáveis-categóricas" class="level2">
+<h2 class="anchored" data-anchor-id="variáveis-categóricas">Variáveis categóricas</h2>
+<section id="gênero-e-tipo-sanguíneo" class="level3">
+<h3 class="anchored" data-anchor-id="gênero-e-tipo-sanguíneo">Gênero e tipo sanguíneo</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="qualidade_de_vida_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Acima, proporções de gênero e tipo sanguíneo não demonstram nada atípico.</p>
+</section>
+<section id="child-pugh" class="level3">
+<h3 class="anchored" data-anchor-id="child-pugh">Child-Pugh</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="qualidade_de_vida_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>A categoria B de Child-Pugh foi a de maior destaque. Ainda assim, 59.0% dos pacientes estão na categoria de maior risco.</p>
+</section>
+<section id="etiologia" class="level3">
+<h3 class="anchored" data-anchor-id="etiologia">Etiologia</h3>
+<div class="columns">
+<div class="column" style="width:49%;">
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Etiologia</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">VHC</td>
+<td style="text-align: center;">23 (24.7%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Alcool</td>
+<td style="text-align: center;">18 (19.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">VHB</td>
+<td style="text-align: center;">18 (19.4%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">HAI</td>
+<td style="text-align: center;">16 (17.2%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">HCC</td>
+<td style="text-align: center;">11 (11.8%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Criptogenica</td>
+<td style="text-align: center;">6 (6.5%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">CEP</td>
+<td style="text-align: center;">4 (4.3%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Budd chiari</td>
+<td style="text-align: center;">3 (3.2%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">CBP</td>
+<td style="text-align: center;">2 (2.2%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Def alfa 1 antitripsina</td>
+<td style="text-align: center;">2 (2.2%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Adenoma hep gigante - secretor de renina</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Doenca de wilson</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">MTX</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">NASH</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Polineuropatia amiloidotica familiar</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Sd allagile</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:1%;">
+
+</div><div class="column" style="width:49%;">
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(201, 106, 18, 255) !important;">Etiologia</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(201, 106, 18, 255) !important;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">VHC</td>
+<td style="text-align: center;">23 (24.7%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Alcool</td>
+<td style="text-align: center;">18 (19.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">VHB</td>
+<td style="text-align: center;">18 (19.4%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">HAI</td>
+<td style="text-align: center;">16 (17.2%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">HCC</td>
+<td style="text-align: center;">11 (11.8%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Criptogenica</td>
+<td style="text-align: center;">6 (6.5%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Outro</td>
+<td style="text-align: center;">6 (6.5%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">CEP</td>
+<td style="text-align: center;">4 (4.3%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Budd chiari</td>
+<td style="text-align: center;">3 (3.2%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">CBP</td>
+<td style="text-align: center;">2 (2.2%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Def alfa 1 antitripsina</td>
+<td style="text-align: center;">2 (2.2%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>As tabelas acima mostram as condições que eventualmente levaram à necessidade do transplante. As duas tabelas representam o mesmo dado, mas a da direita condensa as causas com aparição única em “Outro”. É importante ressaltar que 15 transplantados apresentavam mais de uma condição.</p>
+</section>
+<section id="comorbidades-preexistentes" class="level3">
+<h3 class="anchored" data-anchor-id="comorbidades-preexistentes">Comorbidades preexistentes</h3>
+<div class="columns">
+<div class="column" style="width:31.3%;">
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<caption>Total pacientes (n = 93)</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Comorbidades</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Sem comorbidades</td>
+<td style="text-align: center;">64 (68.8%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">DM2</td>
+<td style="text-align: center;">9 (9.7%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">HAS</td>
+<td style="text-align: center;">7 (7.5%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Hipot</td>
+<td style="text-align: center;">3 (3.2%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Osteop</td>
+<td style="text-align: center;">2 (2.2%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">RCUI</td>
+<td style="text-align: center;">2 (2.2%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Cardiopatia chagasica</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Def prot c e s</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Depressao</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">DSLP</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Dvp 14d</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Epilepsia</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Hcc - hepatectomia</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">HIV</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Lma (qtx 1989)</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Nefrolitiase</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Neuropatia perif por def b12</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Obesidade</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Psoriase</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Tx renal 1998 por irc</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Tx renal iv 1984 (nefrite) e 2002 (rejeicao)</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Ulcera gastrica</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Valvopatia</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:3%;">
+
+</div><div class="column" style="width:31.3%;">
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<caption>Pacientes com comorbidades (n = 29)</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(201, 106, 18, 255) !important;">Comorbidades</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(201, 106, 18, 255) !important;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">DM2</td>
+<td style="text-align: center;">9 (31.0%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">HAS</td>
+<td style="text-align: center;">7 (24.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Hipot</td>
+<td style="text-align: center;">3 (10.3%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Osteop</td>
+<td style="text-align: center;">2 (6.9%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">RCUI</td>
+<td style="text-align: center;">2 (6.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Cardiopatia chagasica</td>
+<td style="text-align: center;">1 (3.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Def prot c e s</td>
+<td style="text-align: center;">1 (3.4%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Depressao</td>
+<td style="text-align: center;">1 (3.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">DSLP</td>
+<td style="text-align: center;">1 (3.4%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Dvp 14d</td>
+<td style="text-align: center;">1 (3.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Epilepsia</td>
+<td style="text-align: center;">1 (3.4%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Hcc - hepatectomia</td>
+<td style="text-align: center;">1 (3.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">HIV</td>
+<td style="text-align: center;">1 (3.4%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Lma (qtx 1989)</td>
+<td style="text-align: center;">1 (3.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Nefrolitiase</td>
+<td style="text-align: center;">1 (3.4%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Neuropatia perif por def b12</td>
+<td style="text-align: center;">1 (3.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Obesidade</td>
+<td style="text-align: center;">1 (3.4%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Psoriase</td>
+<td style="text-align: center;">1 (3.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Tx renal 1998 por irc</td>
+<td style="text-align: center;">1 (3.4%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Tx renal iv 1984 (nefrite) e 2002 (rejeicao)</td>
+<td style="text-align: center;">1 (3.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Ulcera gastrica</td>
+<td style="text-align: center;">1 (3.4%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Valvopatia</td>
+<td style="text-align: center;">1 (3.4%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:3%;">
+
+</div><div class="column" style="width:31.3%;">
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<caption>Pacientes com comorbidades - resumo (n = 29)</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(27, 94, 32, 255) !important;">Comorbidades</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(27, 94, 32, 255) !important;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Outro</td>
+<td style="text-align: center;">17 (58.6%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">DM2</td>
+<td style="text-align: center;">9 (31.0%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">HAS</td>
+<td style="text-align: center;">7 (24.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Hipot</td>
+<td style="text-align: center;">3 (10.3%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Osteop</td>
+<td style="text-align: center;">2 (6.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">RCUI</td>
+<td style="text-align: center;">2 (6.9%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>31.2% das pessoas apresentaram comorbidades anteriores ao transplante, com suas frequências listadas acima. Novamente, as três tabelas são equivalentes, porém em diferentes níveis de detalhamento. 7 pessoas acumulavam mais de uma comorbidade.</p>
+</section>
+<section id="complicações-da-cirrose" class="level3">
+<h3 class="anchored" data-anchor-id="complicações-da-cirrose">Complicações da Cirrose</h3>
+<div class="columns">
+<div class="column" style="width:31.3%;">
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<caption>Total pacientes (n = 93)</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Complicações</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Sem complicações</td>
+<td style="text-align: center;">35 (37.6%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Ascite</td>
+<td style="text-align: center;">28 (30.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">HDA</td>
+<td style="text-align: center;">24 (25.8%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Encefalopatia</td>
+<td style="text-align: center;">15 (16.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">PBE</td>
+<td style="text-align: center;">8 (8.6%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">HCC</td>
+<td style="text-align: center;">4 (4.3%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Prurido</td>
+<td style="text-align: center;">4 (4.3%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Sd hepatorrenal</td>
+<td style="text-align: center;">2 (2.2%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Varizes esofago</td>
+<td style="text-align: center;">2 (2.2%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Hepatite fulminante</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Ictericia</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Sd hepatopulmonar</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Trombose veia porta (recanalizada)</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:3%;">
+
+</div><div class="column" style="width:31.3%;">
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<caption>Pacientes com complicações (n = 58)</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(201, 106, 18, 255) !important;">Complicações</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(201, 106, 18, 255) !important;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Ascite</td>
+<td style="text-align: center;">28 (48.3%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">HDA</td>
+<td style="text-align: center;">24 (41.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Encefalopatia</td>
+<td style="text-align: center;">15 (25.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">PBE</td>
+<td style="text-align: center;">8 (13.8%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">HCC</td>
+<td style="text-align: center;">4 (6.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Prurido</td>
+<td style="text-align: center;">4 (6.9%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Sd hepatorrenal</td>
+<td style="text-align: center;">2 (3.4%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Varizes esofago</td>
+<td style="text-align: center;">2 (3.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Hepatite fulminante</td>
+<td style="text-align: center;">1 (1.7%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Ictericia</td>
+<td style="text-align: center;">1 (1.7%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Sd hepatopulmonar</td>
+<td style="text-align: center;">1 (1.7%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Trombose veia porta (recanalizada)</td>
+<td style="text-align: center;">1 (1.7%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:3%;">
+
+</div><div class="column" style="width:31.3%;">
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<caption>Pacientes com complicações - resumo (n = 58)</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(27, 94, 32, 255) !important;">Complicações</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(27, 94, 32, 255) !important;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Ascite</td>
+<td style="text-align: center;">28 (48.3%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Encefalopatia</td>
+<td style="text-align: center;">15 (25.9%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">HCC</td>
+<td style="text-align: center;">4 (6.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">HDA</td>
+<td style="text-align: center;">24 (41.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Outro</td>
+<td style="text-align: center;">4 (6.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">PBE</td>
+<td style="text-align: center;">8 (13.8%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Prurido</td>
+<td style="text-align: center;">4 (6.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Sd hepatorrenal</td>
+<td style="text-align: center;">2 (3.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Varizes esofago</td>
+<td style="text-align: center;">2 (3.4%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Diferentemente da situação das comorbidades, a maioria (62.4%) dos transplantados apresenta complicações oriundas da cirrose, conforme descritas nas tabelas acima. 25 pessoas apresentaram múltiplas complicações.</p>
+</section>
+<section id="comorbidades-subsequentes" class="level3">
+<h3 class="anchored" data-anchor-id="comorbidades-subsequentes">Comorbidades subsequentes</h3>
+<div class="columns">
+<div class="column" style="width:31.3%;">
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<caption>Total pacientes (n = 93)</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Comorbidades</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">HAS</td>
+<td style="text-align: center;">41 (44.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Sem comorbidades</td>
+<td style="text-align: center;">25 (26.9%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">DM2</td>
+<td style="text-align: center;">22 (23.7%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">IRC</td>
+<td style="text-align: center;">15 (16.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Osteop</td>
+<td style="text-align: center;">14 (15.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">DSLP</td>
+<td style="text-align: center;">10 (10.8%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Hipot</td>
+<td style="text-align: center;">10 (10.8%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Depressao</td>
+<td style="text-align: center;">5 (5.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">DRC</td>
+<td style="text-align: center;">4 (4.3%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Obesidade</td>
+<td style="text-align: center;">4 (4.3%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">DAC</td>
+<td style="text-align: center;">3 (3.2%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Epilepsia</td>
+<td style="text-align: center;">3 (3.2%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">IAM</td>
+<td style="text-align: center;">3 (3.2%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">ASMA</td>
+<td style="text-align: center;">2 (2.2%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Ca pele</td>
+<td style="text-align: center;">2 (2.2%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">HPB</td>
+<td style="text-align: center;">2 (2.2%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">(Prostatec)</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Abscesso hep pos bx 2015</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Adenoca utero (hta)</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">AVCI</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Ca bexiga</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Ca colon (colec)</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Ca prostata</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Crise parcial de ausencia</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">D crohn</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Dhgna</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">DM</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Drc (estenose a renal d)</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">DSL</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">EA</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Esteatose</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Fibromialg</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Glaucoma</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">GOTA</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Hdb (diverticulos - colec)</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Hpb (prostatec)</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">ICC</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Irc (doenca renal policistica)</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Irc (tx renal iv 08/2015)</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">LH</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Linfoma 2014 (curado)</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Linfoma difuso de grandes cels b (qt)</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Linfoma snc (qt)</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Lnh 2015</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Lnh b (qt)</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Marcapasso</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Neuropatia perif</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">RCIU</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">RCUI</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">TVP</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Tx renal 12/2017</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Tx renal 1998 por irc</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Valvopatia</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:3%;">
+
+</div><div class="column" style="width:31.3%;">
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<caption>Pacientes com comorbidades posteriores (n = 68)</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(201, 106, 18, 255) !important;">Comorbidades</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(201, 106, 18, 255) !important;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">HAS</td>
+<td style="text-align: center;">41 (60.3%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">DM2</td>
+<td style="text-align: center;">22 (32.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">IRC</td>
+<td style="text-align: center;">15 (22.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Osteop</td>
+<td style="text-align: center;">14 (20.6%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">DSLP</td>
+<td style="text-align: center;">10 (14.7%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Hipot</td>
+<td style="text-align: center;">10 (14.7%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Depressao</td>
+<td style="text-align: center;">5 (7.4%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">DRC</td>
+<td style="text-align: center;">4 (5.9%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Obesidade</td>
+<td style="text-align: center;">4 (5.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">DAC</td>
+<td style="text-align: center;">3 (4.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Epilepsia</td>
+<td style="text-align: center;">3 (4.4%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">IAM</td>
+<td style="text-align: center;">3 (4.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">ASMA</td>
+<td style="text-align: center;">2 (2.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Ca pele</td>
+<td style="text-align: center;">2 (2.9%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">HPB</td>
+<td style="text-align: center;">2 (2.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">(Prostatec)</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Abscesso hep pos bx 2015</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Adenoca utero (hta)</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">AVCI</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Ca bexiga</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Ca colon (colec)</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Ca prostata</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Crise parcial de ausencia</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">D crohn</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Dhgna</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">DM</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Drc (estenose a renal d)</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">DSL</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">EA</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Esteatose</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Fibromialg</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Glaucoma</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">GOTA</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Hdb (diverticulos - colec)</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Hpb (prostatec)</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">ICC</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Irc (doenca renal policistica)</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Irc (tx renal iv 08/2015)</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">LH</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Linfoma 2014 (curado)</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Linfoma difuso de grandes cels b (qt)</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Linfoma snc (qt)</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Lnh 2015</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Lnh b (qt)</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Marcapasso</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Neuropatia perif</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">RCIU</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">RCUI</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">TVP</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Tx renal 12/2017</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Tx renal 1998 por irc</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Valvopatia</td>
+<td style="text-align: center;">1 (1.5%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:3%;">
+
+</div><div class="column" style="width:31.3%;">
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<caption>Pacientes com comorbidades posteriores - resumo (n = 68)</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(27, 94, 32, 255) !important;">Comorbidades</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(27, 94, 32, 255) !important;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">HAS</td>
+<td style="text-align: center;">41 (60.3%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Outro</td>
+<td style="text-align: center;">37 (54.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">DM2</td>
+<td style="text-align: center;">22 (32.4%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">IRC</td>
+<td style="text-align: center;">15 (22.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Osteop</td>
+<td style="text-align: center;">14 (20.6%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">DSLP</td>
+<td style="text-align: center;">10 (14.7%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Hipot</td>
+<td style="text-align: center;">10 (14.7%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Depressao</td>
+<td style="text-align: center;">5 (7.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">DRC</td>
+<td style="text-align: center;">4 (5.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Obesidade</td>
+<td style="text-align: center;">4 (5.9%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">DAC</td>
+<td style="text-align: center;">3 (4.4%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Epilepsia</td>
+<td style="text-align: center;">3 (4.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">IAM</td>
+<td style="text-align: center;">3 (4.4%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Asma</td>
+<td style="text-align: center;">2 (2.9%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Ca pele</td>
+<td style="text-align: center;">2 (2.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">HPB</td>
+<td style="text-align: center;">2 (2.9%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>O total de pessoas com comorbidades saiu de 29 para 68. Do ponto de vista Estatístico, somente com os dados presentes neste estudo de caso, não é possível chegar à conclusão de que o transplante pode ter favorecido a incidência de comorbidades nos pacientes.</p>
+</section>
+<section id="transfusão" class="level3">
+<h3 class="anchored" data-anchor-id="transfusão">Transfusão</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Transfusão</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Total</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">%</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">% (sem missing)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Não</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">7.5%</td>
+<td style="text-align: center;">10.6%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">59</td>
+<td style="text-align: center;">63.4%</td>
+<td style="text-align: center;">89.4%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Sem informação</td>
+<td style="text-align: center;">27</td>
+<td style="text-align: center;">29.0%</td>
+<td style="text-align: center;">---</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>Desconsiderando as 27 pessoas sem informação, quase todos os pacientes precisaram de transfusão de sangue durante o transplante.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Tipo</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Pacientes</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Média</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">DP</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Mediana</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Mínimo</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Máximo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Concentrado de Hemácias</td>
+<td style="text-align: center;">55</td>
+<td style="text-align: center;">4.65</td>
+<td style="text-align: center;">3.28</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">14</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Crioprecipitado</td>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">6.88</td>
+<td style="text-align: center;">5.00</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">22</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Plaquetas</td>
+<td style="text-align: center;">43</td>
+<td style="text-align: center;">9.07</td>
+<td style="text-align: center;">5.68</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">25</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Plasma</td>
+<td style="text-align: center;">47</td>
+<td style="text-align: center;">8.00</td>
+<td style="text-align: center;">6.05</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">37</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="qualidade_de_vida_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>A tabela e o gráfico acima mostram a distribuição das unidades de transfusão durante o transplante, para aqueles que precisaram. Foram poucos os pacientes que receberam Crioprecipitado, mas quase todos receberam Concentrado de Hemácias.</p>
+</section>
+<section id="complicações-agudas" class="level3">
+<h3 class="anchored" data-anchor-id="complicações-agudas">Complicações Agudas</h3>
+<div class="columns">
+<div class="column" style="width:31.3%;">
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<caption>Total pacientes (n = 93)</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Complicações Agudas</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Não</td>
+<td style="text-align: center;">41 (44.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Rejeicao aguda</td>
+<td style="text-align: center;">18 (19.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">PNM</td>
+<td style="text-align: center;">7 (7.5%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Fistula biliar</td>
+<td style="text-align: center;">5 (5.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Estenose coledoco</td>
+<td style="text-align: center;">4 (4.3%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Derrame pleural dir</td>
+<td style="text-align: center;">3 (3.2%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">EAP</td>
+<td style="text-align: center;">3 (3.2%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Disf renal</td>
+<td style="text-align: center;">2 (2.2%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Reativacao cmv</td>
+<td style="text-align: center;">2 (2.2%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Sepse pulmonar</td>
+<td style="text-align: center;">2 (2.2%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Abscesso pulm</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Broncoasp</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Celulite flanco dir e genitalia</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Coagulopatia intraop</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Convulsao</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Crise convulsiva</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Disf enxerto</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Esplenec io por sgto</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Estenose veia porta</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Hemotorax macico intraop</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Herpes</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Infec fo</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">IRA</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Ira pre renal</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Nefrotoxicidade por med</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Neurotoxicidade fk</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Pcr io por hipovolemia</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Perfuracao intestinal</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">SARA</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Sepse poi</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Sgto ulcera</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">TAH</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Trombocitose</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Trombose veia cava infra hepatica</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Trombose veia porta</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:3%;">
+
+</div><div class="column" style="width:31.3%;">
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<caption>Total pacientes (n = 52)</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(201, 106, 18, 255) !important;">Complicações Agudas</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(201, 106, 18, 255) !important;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Rejeicao aguda</td>
+<td style="text-align: center;">18 (34.6%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">PNM</td>
+<td style="text-align: center;">7 (13.5%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Fistula biliar</td>
+<td style="text-align: center;">5 (9.6%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Estenose coledoco</td>
+<td style="text-align: center;">4 (7.7%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Derrame pleural dir</td>
+<td style="text-align: center;">3 (5.8%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">EAP</td>
+<td style="text-align: center;">3 (5.8%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Disf renal</td>
+<td style="text-align: center;">2 (3.8%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Reativacao cmv</td>
+<td style="text-align: center;">2 (3.8%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Sepse pulmonar</td>
+<td style="text-align: center;">2 (3.8%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Abscesso pulm</td>
+<td style="text-align: center;">1 (1.9%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Broncoasp</td>
+<td style="text-align: center;">1 (1.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Celulite flanco dir e genitalia</td>
+<td style="text-align: center;">1 (1.9%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Coagulopatia intraop</td>
+<td style="text-align: center;">1 (1.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Convulsao</td>
+<td style="text-align: center;">1 (1.9%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Crise convulsiva</td>
+<td style="text-align: center;">1 (1.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Disf enxerto</td>
+<td style="text-align: center;">1 (1.9%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Esplenec io por sgto</td>
+<td style="text-align: center;">1 (1.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Estenose veia porta</td>
+<td style="text-align: center;">1 (1.9%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Hemotorax macico intraop</td>
+<td style="text-align: center;">1 (1.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Herpes</td>
+<td style="text-align: center;">1 (1.9%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Infec fo</td>
+<td style="text-align: center;">1 (1.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">IRA</td>
+<td style="text-align: center;">1 (1.9%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Ira pre renal</td>
+<td style="text-align: center;">1 (1.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Nefrotoxicidade por med</td>
+<td style="text-align: center;">1 (1.9%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Neurotoxicidade fk</td>
+<td style="text-align: center;">1 (1.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Pcr io por hipovolemia</td>
+<td style="text-align: center;">1 (1.9%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Perfuracao intestinal</td>
+<td style="text-align: center;">1 (1.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">SARA</td>
+<td style="text-align: center;">1 (1.9%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Sepse poi</td>
+<td style="text-align: center;">1 (1.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Sgto ulcera</td>
+<td style="text-align: center;">1 (1.9%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">TAH</td>
+<td style="text-align: center;">1 (1.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Trombocitose</td>
+<td style="text-align: center;">1 (1.9%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Trombose veia cava infra hepatica</td>
+<td style="text-align: center;">1 (1.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Trombose veia porta</td>
+<td style="text-align: center;">1 (1.9%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:3%;">
+
+</div><div class="column" style="width:31.3%;">
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<caption>Total pacientes (n = 52)</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(27, 94, 32, 255) !important;">Complicações Agudas</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(27, 94, 32, 255) !important;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Outro</td>
+<td style="text-align: center;">25 (48.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Rejeicao aguda</td>
+<td style="text-align: center;">18 (34.6%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">PNM</td>
+<td style="text-align: center;">7 (13.5%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Fistula biliar</td>
+<td style="text-align: center;">5 (9.6%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Estenose coledoco</td>
+<td style="text-align: center;">4 (7.7%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Derrame pleural dir</td>
+<td style="text-align: center;">3 (5.8%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">EAP</td>
+<td style="text-align: center;">3 (5.8%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Disf renal</td>
+<td style="text-align: center;">2 (3.8%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Reativacao cmv</td>
+<td style="text-align: center;">2 (3.8%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Sepse pulmonar</td>
+<td style="text-align: center;">2 (3.8%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>55.9% dos transplantados apresentaram Complicações Agudas. A maior parte delas foi Rejeição Aguda 19.4%.</p>
+</section>
+<section id="necessidade-de-reoperação" class="level3">
+<h3 class="anchored" data-anchor-id="necessidade-de-reoperação">Necessidade de reoperação</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Reoperação</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Causa</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Não</td>
+<td style="text-align: center;">Não</td>
+<td style="text-align: center;">84 (90.32%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Estenose coledoco</td>
+<td style="text-align: center;">6 (6.45%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Fistula biliar (bd)</td>
+<td style="text-align: center;">1 (1.08%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Rejeicao cronica</td>
+<td style="text-align: center;">1 (1.08%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">TAH</td>
+<td style="text-align: center;">1 (1.08%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>Foram poucos os que necessitaram de reoperação após o transplante. Os motivos estão descritos na tabela acima.</p>
+</section>
+<section id="complicações-tardias" class="level3">
+<h3 class="anchored" data-anchor-id="complicações-tardias">Complicações tardias</h3>
+<div class="columns">
+<div class="column" style="width:31.3%;">
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<caption>Total pacientes (n = 93)</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Complicações Tardias</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Não</td>
+<td style="text-align: center;">32 (34.4%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Rejeicao cronica</td>
+<td style="text-align: center;">20 (21.5%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Recidiva vhc</td>
+<td style="text-align: center;">18 (19.4%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Estenose coledoco</td>
+<td style="text-align: center;">17 (18.3%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Recidiva vhb</td>
+<td style="text-align: center;">7 (7.5%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">H incisional</td>
+<td style="text-align: center;">3 (3.2%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Linfoma</td>
+<td style="text-align: center;">3 (3.2%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Recidiva hai</td>
+<td style="text-align: center;">3 (3.2%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Nefrotoxicidade fk</td>
+<td style="text-align: center;">2 (2.2%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">TAH</td>
+<td style="text-align: center;">2 (2.2%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">CEP</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Cirrose 2005</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Coledocolitiase</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Esteatose</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Estenose bd</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Fistula biliar 2m pos tx</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Infarto esplenico</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">NASH</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Re tx 2010</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Recidiva cbp</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Recidiva cep</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Varicela</td>
+<td style="text-align: center;">1 (1.1%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:3%;">
+
+</div><div class="column" style="width:31.3%;">
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<caption>Total pacientes (n = 61)</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(201, 106, 18, 255) !important;">Complicações Tardias</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(201, 106, 18, 255) !important;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Rejeicao cronica</td>
+<td style="text-align: center;">19 (31.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Recidiva vhc</td>
+<td style="text-align: center;">18 (29.5%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Estenose coledoco</td>
+<td style="text-align: center;">17 (27.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Recidiva vhb</td>
+<td style="text-align: center;">7 (11.5%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">H incisional</td>
+<td style="text-align: center;">3 (4.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Linfoma</td>
+<td style="text-align: center;">3 (4.9%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Recidiva hai</td>
+<td style="text-align: center;">3 (4.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Nefrotoxicidade fk</td>
+<td style="text-align: center;">2 (3.3%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">TAH</td>
+<td style="text-align: center;">2 (3.3%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">CEP</td>
+<td style="text-align: center;">1 (1.6%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Cirrose 2005</td>
+<td style="text-align: center;">1 (1.6%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Coledocolitiase</td>
+<td style="text-align: center;">1 (1.6%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Cronica</td>
+<td style="text-align: center;">1 (1.6%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Esteatose</td>
+<td style="text-align: center;">1 (1.6%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Estenose bd</td>
+<td style="text-align: center;">1 (1.6%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Fistula biliar 2m pos tx</td>
+<td style="text-align: center;">1 (1.6%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Infarto esplenico</td>
+<td style="text-align: center;">1 (1.6%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">NASH</td>
+<td style="text-align: center;">1 (1.6%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Re tx 2010</td>
+<td style="text-align: center;">1 (1.6%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Recidiva cbp</td>
+<td style="text-align: center;">1 (1.6%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Recidiva cep</td>
+<td style="text-align: center;">1 (1.6%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Varicela</td>
+<td style="text-align: center;">1 (1.6%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:3%;">
+
+</div><div class="column" style="width:31.3%;">
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<caption>Total pacientes (n = 61)</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(27, 94, 32, 255) !important;">Complicações Tardias</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(27, 94, 32, 255) !important;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Rejeicao cronica</td>
+<td style="text-align: center;">19 (31.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Recidiva vhc</td>
+<td style="text-align: center;">18 (29.5%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Estenose coledoco</td>
+<td style="text-align: center;">17 (27.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Outro</td>
+<td style="text-align: center;">13 (21.3%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Recidiva vhb</td>
+<td style="text-align: center;">7 (11.5%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">H incisional</td>
+<td style="text-align: center;">3 (4.9%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Linfoma</td>
+<td style="text-align: center;">3 (4.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Recidiva hai</td>
+<td style="text-align: center;">3 (4.9%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Nefrotoxicidade fk</td>
+<td style="text-align: center;">2 (3.3%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">TAH</td>
+<td style="text-align: center;">2 (3.3%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Somente 34.4% pessoas não apresentaram complicações tardias. As mais frequentes foram Rejeicao Cronica (21.5%), Recidiva Vhc (19.4%), Estenose Coledoco (18.3%).</p>
+</section>
+<section id="rejeição" class="level3">
+<h3 class="anchored" data-anchor-id="rejeição">Rejeição</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="qualidade_de_vida_files/figure-html/unnamed-chunk-34-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>65.6% dos transplantados não apresentaram nenhum tipo de rejeição. Dos 36 restantes, 38.9% tivemam rejeição aguda</p>
+</section>
+<section id="retransplante" class="level3">
+<h3 class="anchored" data-anchor-id="retransplante">Retransplante</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Retransplante</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Causa</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Não</td>
+<td style="text-align: center;">Não</td>
+<td style="text-align: center;">88 (94.62%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Rejeição crônica</td>
+<td style="text-align: center;">3 (3.23%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">TAH</td>
+<td style="text-align: center;">2 (2.15%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>Apenas 5 pessoas precisaram refazer o transplante, pelos motivos descritos acima.</p>
+</section>
+</section>
+</section>
+<section id="índices-de-qualidade-de-vida" class="level1">
+<h1>Índices de Qualidade de Vida</h1>
+<p>O questionário SF-36 foi aplicado aos transplantados, e os valores obtidos foram comparados com índices nacionais e regionais fornecidos por um [a href=“https://api.arca.fiocruz.br/api/core/bitstreams/d5e885ab-f928-4291-9bf0-67decbe20a95/content”]estudo da Fiocruz[/a].</p>
+<section id="resultados-do-questionário-aplicado-aos-transplantados" class="level2">
+<h2 class="anchored" data-anchor-id="resultados-do-questionário-aplicado-aos-transplantados">Resultados do questionário aplicado aos transplantados</h2>
+<section id="resumo" class="level3">
+<h3 class="anchored" data-anchor-id="resumo">Resumo</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Domínio</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Média</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">DP</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Mediana</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Mínimo</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Máximo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">EGS</td>
+<td style="text-align: center;">68.9</td>
+<td style="text-align: center;">17.7</td>
+<td style="text-align: center;">68.1</td>
+<td style="text-align: center;">20.2</td>
+<td style="text-align: center;">100.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">CF</td>
+<td style="text-align: center;">88.2</td>
+<td style="text-align: center;">11.6</td>
+<td style="text-align: center;">90.6</td>
+<td style="text-align: center;">53.6</td>
+<td style="text-align: center;">100.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">AF</td>
+<td style="text-align: center;">82.4</td>
+<td style="text-align: center;">22.8</td>
+<td style="text-align: center;">92.3</td>
+<td style="text-align: center;">17.3</td>
+<td style="text-align: center;">100.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">AE</td>
+<td style="text-align: center;">71.9</td>
+<td style="text-align: center;">30.6</td>
+<td style="text-align: center;">83.9</td>
+<td style="text-align: center;">0.0</td>
+<td style="text-align: center;">100.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">AS</td>
+<td style="text-align: center;">84.8</td>
+<td style="text-align: center;">15.6</td>
+<td style="text-align: center;">89.5</td>
+<td style="text-align: center;">42.6</td>
+<td style="text-align: center;">100.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Dor</td>
+<td style="text-align: center;">76.8</td>
+<td style="text-align: center;">20.7</td>
+<td style="text-align: center;">80.8</td>
+<td style="text-align: center;">26.6</td>
+<td style="text-align: center;">100.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">VT</td>
+<td style="text-align: center;">77.0</td>
+<td style="text-align: center;">18.3</td>
+<td style="text-align: center;">76.3</td>
+<td style="text-align: center;">25.9</td>
+<td style="text-align: center;">100.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">SM</td>
+<td style="text-align: center;">60.9</td>
+<td style="text-align: center;">15.3</td>
+<td style="text-align: center;">61.9</td>
+<td style="text-align: center;">23.1</td>
+<td style="text-align: center;">94.7</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="qualidade_de_vida_files/figure-html/unnamed-chunk-37-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Todos os oito domínios apresentaram uma amplitude grande (73.180813 em média). O domínio AE (aspectos emocionais) é o que tem a maior amplitude de todas, chegando até mesmo a zero. Os valores CF (capacidade funcional) e AS (aspectos sociais) são os indicadores com melhores resultados, no geral.</p>
+<section id="teste-de-médias" class="level4">
+<h4 class="anchored" data-anchor-id="teste-de-médias">Teste de médias</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Domínio</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Média</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Média BR</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">p-valor BR</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Média Sul</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">p-valor Sul</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">EGS</td>
+<td style="text-align: center;">68.9</td>
+<td style="text-align: center;">70.2</td>
+<td style="text-align: center;"><span style="     color: rgba(0, 0, 0, 255) !important;">0.4882</span></td>
+<td style="text-align: center;">71.1</td>
+<td style="text-align: center;"><span style="     color: rgba(0, 0, 0, 255) !important;">0.238</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">CF</td>
+<td style="text-align: center;">88.2</td>
+<td style="text-align: center;">75.5</td>
+<td style="text-align: center;"><span style="     color: rgba(69, 129, 142, 255) !important;">0</span></td>
+<td style="text-align: center;">82.4</td>
+<td style="text-align: center;"><span style="     color: rgba(69, 129, 142, 255) !important;">0</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">AF</td>
+<td style="text-align: center;">82.4</td>
+<td style="text-align: center;">77.5</td>
+<td style="text-align: center;"><span style="     color: rgba(69, 129, 142, 255) !important;">0.0425</span></td>
+<td style="text-align: center;">74.7</td>
+<td style="text-align: center;"><span style="     color: rgba(69, 129, 142, 255) !important;">0.0017</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">AE</td>
+<td style="text-align: center;">71.9</td>
+<td style="text-align: center;">81.7</td>
+<td style="text-align: center;"><span style="     color: rgba(69, 129, 142, 255) !important;">0.0026</span></td>
+<td style="text-align: center;">70.0</td>
+<td style="text-align: center;"><span style="     color: rgba(0, 0, 0, 255) !important;">0.5599</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">AS</td>
+<td style="text-align: center;">84.8</td>
+<td style="text-align: center;">83.9</td>
+<td style="text-align: center;"><span style="     color: rgba(0, 0, 0, 255) !important;">0.5786</span></td>
+<td style="text-align: center;">78.3</td>
+<td style="text-align: center;"><span style="     color: rgba(69, 129, 142, 255) !important;">0.0001</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Dor</td>
+<td style="text-align: center;">76.8</td>
+<td style="text-align: center;">76.7</td>
+<td style="text-align: center;"><span style="     color: rgba(0, 0, 0, 255) !important;">0.972</span></td>
+<td style="text-align: center;">67.5</td>
+<td style="text-align: center;"><span style="     color: rgba(69, 129, 142, 255) !important;">0</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">VT</td>
+<td style="text-align: center;">77.0</td>
+<td style="text-align: center;">71.9</td>
+<td style="text-align: center;"><span style="     color: rgba(69, 129, 142, 255) !important;">0.008</span></td>
+<td style="text-align: center;">66.8</td>
+<td style="text-align: center;"><span style="     color: rgba(69, 129, 142, 255) !important;">0</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">SM</td>
+<td style="text-align: center;">60.9</td>
+<td style="text-align: center;">74.5</td>
+<td style="text-align: center;"><span style="     color: rgba(69, 129, 142, 255) !important;">0</span></td>
+<td style="text-align: center;">73.8</td>
+<td style="text-align: center;"><span style="     color: rgba(69, 129, 142, 255) !important;">0</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p><span class="math inline">\(H_0\)</span>: Para um domínio específico, a média observada é igual à média de referência (Brasil ou Sul)</p>
+<p><span class="math inline">\(H_1\)</span>: Para um domínio específico, a média observada é diferente da média de referência (Brasil ou Sul)</p>
+<p>Para cada domínio foram calculados dois testes t-Student de diferença de médias: um com a média brasileira como referência, e outro com a média da região Sul do Brasil. Com um nível de significância <span class="math inline">\(\alpha=0.05\)</span>:</p>
+<ul>
+<li>Média BR: Os domínios CF, AF, AE, VT e SM apresentaram diferença estatisticamente significante.</li>
+<li>Média Sul: Os domínios CF, AF, AS, Dor, VT e SM apresentaram diferença estatisticamente significante.</li>
+</ul>
+</section>
+</section>
+<section id="qualidade-de-vida-vs-idade" class="level3">
+<h3 class="anchored" data-anchor-id="qualidade-de-vida-vs-idade">Qualidade de vida VS Idade</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; empty-cells: hide; border-bottom: hidden;"></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px; color: rgba(255, 255, 255, 255) !important; padding-right: 4px; padding-left: 4px; background-color: rgba(47, 85, 151, 255) !important;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Média
+</div></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px; color: rgba(255, 255, 255, 255) !important; padding-right: 4px; padding-left: 4px; background-color: rgba(47, 85, 151, 255) !important;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+DP
+</div></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px; color: rgba(255, 255, 255, 255) !important; padding-right: 4px; padding-left: 4px; background-color: rgba(47, 85, 151, 255) !important;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Mediana
+</div></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px; color: rgba(255, 255, 255, 255) !important; padding-right: 4px; padding-left: 4px; background-color: rgba(47, 85, 151, 255) !important;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Mínimo
+</div></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px; color: rgba(255, 255, 255, 255) !important; padding-right: 4px; padding-left: 4px; background-color: rgba(47, 85, 151, 255) !important;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Máximo
+</div></th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Domínio</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">&lt; 50</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">&gt;= 50</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">&lt; 50</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">&gt;= 50</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">&lt; 50</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">&gt;= 50</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">&lt; 50</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">&gt;= 50</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">&lt; 50</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">&gt;= 50</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">EGS</td>
+<td style="text-align: center;">67.9</td>
+<td style="text-align: center;">71.3</td>
+<td style="text-align: center;">17.7</td>
+<td style="text-align: center;">17.6</td>
+<td style="text-align: center;">66.9</td>
+<td style="text-align: center;">72.6</td>
+<td style="text-align: center;">23.1</td>
+<td style="text-align: center;">20.2</td>
+<td style="text-align: center;">100.0</td>
+<td style="text-align: center;">100.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">CF</td>
+<td style="text-align: center;">87.0</td>
+<td style="text-align: center;">91.0</td>
+<td style="text-align: center;">12.4</td>
+<td style="text-align: center;">9.0</td>
+<td style="text-align: center;">90.0</td>
+<td style="text-align: center;">91.8</td>
+<td style="text-align: center;">53.6</td>
+<td style="text-align: center;">71.4</td>
+<td style="text-align: center;">100.0</td>
+<td style="text-align: center;">100.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">AF</td>
+<td style="text-align: center;">80.1</td>
+<td style="text-align: center;">87.5</td>
+<td style="text-align: center;">24.6</td>
+<td style="text-align: center;">17.1</td>
+<td style="text-align: center;">88.8</td>
+<td style="text-align: center;">98.4</td>
+<td style="text-align: center;">17.3</td>
+<td style="text-align: center;">42.8</td>
+<td style="text-align: center;">100.0</td>
+<td style="text-align: center;">100.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">AE</td>
+<td style="text-align: center;">71.0</td>
+<td style="text-align: center;">73.9</td>
+<td style="text-align: center;">31.9</td>
+<td style="text-align: center;">27.9</td>
+<td style="text-align: center;">84.8</td>
+<td style="text-align: center;">83.9</td>
+<td style="text-align: center;">0.0</td>
+<td style="text-align: center;">23.2</td>
+<td style="text-align: center;">100.0</td>
+<td style="text-align: center;">100.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">AS</td>
+<td style="text-align: center;">86.4</td>
+<td style="text-align: center;">81.1</td>
+<td style="text-align: center;">15.5</td>
+<td style="text-align: center;">15.4</td>
+<td style="text-align: center;">90.6</td>
+<td style="text-align: center;">82.5</td>
+<td style="text-align: center;">42.6</td>
+<td style="text-align: center;">45.6</td>
+<td style="text-align: center;">100.0</td>
+<td style="text-align: center;">100.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Dor</td>
+<td style="text-align: center;">78.4</td>
+<td style="text-align: center;">72.9</td>
+<td style="text-align: center;">21.0</td>
+<td style="text-align: center;">19.8</td>
+<td style="text-align: center;">82.3</td>
+<td style="text-align: center;">68.7</td>
+<td style="text-align: center;">26.6</td>
+<td style="text-align: center;">45.8</td>
+<td style="text-align: center;">100.0</td>
+<td style="text-align: center;">100.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">VT</td>
+<td style="text-align: center;">77.8</td>
+<td style="text-align: center;">75.3</td>
+<td style="text-align: center;">16.7</td>
+<td style="text-align: center;">21.9</td>
+<td style="text-align: center;">77.0</td>
+<td style="text-align: center;">73.4</td>
+<td style="text-align: center;">29.3</td>
+<td style="text-align: center;">25.9</td>
+<td style="text-align: center;">100.0</td>
+<td style="text-align: center;">100.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">SM</td>
+<td style="text-align: center;">61.2</td>
+<td style="text-align: center;">60.2</td>
+<td style="text-align: center;">14.1</td>
+<td style="text-align: center;">18.1</td>
+<td style="text-align: center;">61.0</td>
+<td style="text-align: center;">62.1</td>
+<td style="text-align: center;">26.2</td>
+<td style="text-align: center;">23.1</td>
+<td style="text-align: center;">94.7</td>
+<td style="text-align: center;">89.8</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="qualidade_de_vida_files/figure-html/unnamed-chunk-40-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Não parece haver uma forma dominante em como a idade afeta a qualidade de vida dos transplantados. Para os domínios AE, SM e VT, a dispersão parece mais ou menos a mesma. Para o domínio CF, a dispersão parece somente mais condensada para idade &gt;= 50. Para AS e Dor, os índices parecem maiores para idade &lt; 50. Por fim, para AF e EGS, os índices parecem maiores para idade &gt;= 50.</p>
+<section id="teste-de-médias-1" class="level4">
+<h4 class="anchored" data-anchor-id="teste-de-médias-1">Teste de médias</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; empty-cells: hide; border-bottom: hidden;"></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px; color: rgba(255, 255, 255, 255) !important; padding-right: 4px; padding-left: 4px; background-color: rgba(47, 85, 151, 255) !important;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Faixa etária
+</div></th>
+<th data-quarto-table-cell-role="th" style="text-align: center; empty-cells: hide; border-bottom: hidden;"></th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Domínio</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">&lt; 50</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">&gt;= 50</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">p-valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">EGS</td>
+<td style="text-align: center;">67.9 ± 17.7</td>
+<td style="text-align: center;">71.3 ± 17.6</td>
+<td style="text-align: center;"><span style="     color: rgba(0, 0, 0, 255) !important;">0.3908</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">CF</td>
+<td style="text-align: center;">87.0 ± 12.4</td>
+<td style="text-align: center;">91.0 ± 9.0</td>
+<td style="text-align: center;"><span style="     color: rgba(0, 0, 0, 255) !important;">0.0896</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">AF</td>
+<td style="text-align: center;">80.1 ± 24.6</td>
+<td style="text-align: center;">87.5 ± 17.1</td>
+<td style="text-align: center;"><span style="     color: rgba(0, 0, 0, 255) !important;">0.1002</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">AE</td>
+<td style="text-align: center;">71.0 ± 31.9</td>
+<td style="text-align: center;">73.9 ± 27.9</td>
+<td style="text-align: center;"><span style="     color: rgba(0, 0, 0, 255) !important;">0.6594</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">AS</td>
+<td style="text-align: center;">86.4 ± 15.5</td>
+<td style="text-align: center;">81.1 ± 15.4</td>
+<td style="text-align: center;"><span style="     color: rgba(0, 0, 0, 255) !important;">0.1344</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Dor</td>
+<td style="text-align: center;">78.4 ± 21.0</td>
+<td style="text-align: center;">72.9 ± 19.8</td>
+<td style="text-align: center;"><span style="     color: rgba(0, 0, 0, 255) !important;">0.2335</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">VT</td>
+<td style="text-align: center;">77.8 ± 16.7</td>
+<td style="text-align: center;">75.3 ± 21.9</td>
+<td style="text-align: center;"><span style="     color: rgba(0, 0, 0, 255) !important;">0.5992</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">SM</td>
+<td style="text-align: center;">61.2 ± 14.1</td>
+<td style="text-align: center;">60.2 ± 18.1</td>
+<td style="text-align: center;"><span style="     color: rgba(0, 0, 0, 255) !important;">0.7832</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p><span class="math inline">\(H_0\)</span>: Para um domínio específico, a média é a mesma para ambas faixas etárias</p>
+<p><span class="math inline">\(H_1\)</span>: Para um domínio específico, a média das duas faixas etárias é diferente</p>
+<p>Para cada domínio foi calculado um teste t-Student de diferença de médias. Nenhum deles mostrou resultados estatisticamente significativos.</p>
+</section>
+</section>
+<section id="qualidade-de-vida-vs-gênero" class="level3">
+<h3 class="anchored" data-anchor-id="qualidade-de-vida-vs-gênero">Qualidade de Vida vs Gênero</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; empty-cells: hide; border-bottom: hidden;"></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px; color: rgba(255, 255, 255, 255) !important; padding-right: 4px; padding-left: 4px; background-color: rgba(47, 85, 151, 255) !important;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Média
+</div></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px; color: rgba(255, 255, 255, 255) !important; padding-right: 4px; padding-left: 4px; background-color: rgba(47, 85, 151, 255) !important;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+DP
+</div></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px; color: rgba(255, 255, 255, 255) !important; padding-right: 4px; padding-left: 4px; background-color: rgba(47, 85, 151, 255) !important;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Mediana
+</div></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px; color: rgba(255, 255, 255, 255) !important; padding-right: 4px; padding-left: 4px; background-color: rgba(47, 85, 151, 255) !important;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Mínimo
+</div></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px; color: rgba(255, 255, 255, 255) !important; padding-right: 4px; padding-left: 4px; background-color: rgba(47, 85, 151, 255) !important;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Máximo
+</div></th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Domínio</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">F</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">M</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">F</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">M</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">F</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">M</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">F</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">M</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">F</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">M</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">EGS</td>
+<td style="text-align: center;">71.4</td>
+<td style="text-align: center;">67.0</td>
+<td style="text-align: center;">16.3</td>
+<td style="text-align: center;">18.5</td>
+<td style="text-align: center;">68.4</td>
+<td style="text-align: center;">67.8</td>
+<td style="text-align: center;">38.7</td>
+<td style="text-align: center;">20.2</td>
+<td style="text-align: center;">100.0</td>
+<td style="text-align: center;">100.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">CF</td>
+<td style="text-align: center;">90.0</td>
+<td style="text-align: center;">86.8</td>
+<td style="text-align: center;">10.5</td>
+<td style="text-align: center;">12.3</td>
+<td style="text-align: center;">93.5</td>
+<td style="text-align: center;">89.4</td>
+<td style="text-align: center;">68.8</td>
+<td style="text-align: center;">53.6</td>
+<td style="text-align: center;">100.0</td>
+<td style="text-align: center;">100.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">AF</td>
+<td style="text-align: center;">84.6</td>
+<td style="text-align: center;">80.6</td>
+<td style="text-align: center;">21.2</td>
+<td style="text-align: center;">24.0</td>
+<td style="text-align: center;">93.6</td>
+<td style="text-align: center;">88.4</td>
+<td style="text-align: center;">28.2</td>
+<td style="text-align: center;">17.3</td>
+<td style="text-align: center;">100.0</td>
+<td style="text-align: center;">100.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">AE</td>
+<td style="text-align: center;">70.5</td>
+<td style="text-align: center;">72.9</td>
+<td style="text-align: center;">33.2</td>
+<td style="text-align: center;">28.8</td>
+<td style="text-align: center;">84.3</td>
+<td style="text-align: center;">83.9</td>
+<td style="text-align: center;">0.0</td>
+<td style="text-align: center;">0.0</td>
+<td style="text-align: center;">100.0</td>
+<td style="text-align: center;">100.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">AS</td>
+<td style="text-align: center;">86.0</td>
+<td style="text-align: center;">83.9</td>
+<td style="text-align: center;">17.2</td>
+<td style="text-align: center;">14.4</td>
+<td style="text-align: center;">90.9</td>
+<td style="text-align: center;">85.5</td>
+<td style="text-align: center;">42.6</td>
+<td style="text-align: center;">43.0</td>
+<td style="text-align: center;">100.0</td>
+<td style="text-align: center;">100.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Dor</td>
+<td style="text-align: center;">76.1</td>
+<td style="text-align: center;">77.3</td>
+<td style="text-align: center;">22.9</td>
+<td style="text-align: center;">19.1</td>
+<td style="text-align: center;">81.0</td>
+<td style="text-align: center;">77.3</td>
+<td style="text-align: center;">26.6</td>
+<td style="text-align: center;">33.2</td>
+<td style="text-align: center;">100.0</td>
+<td style="text-align: center;">100.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">VT</td>
+<td style="text-align: center;">77.6</td>
+<td style="text-align: center;">76.7</td>
+<td style="text-align: center;">17.7</td>
+<td style="text-align: center;">18.9</td>
+<td style="text-align: center;">78.7</td>
+<td style="text-align: center;">74.7</td>
+<td style="text-align: center;">25.9</td>
+<td style="text-align: center;">28.5</td>
+<td style="text-align: center;">100.0</td>
+<td style="text-align: center;">100.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">SM</td>
+<td style="text-align: center;">59.1</td>
+<td style="text-align: center;">62.2</td>
+<td style="text-align: center;">17.2</td>
+<td style="text-align: center;">13.8</td>
+<td style="text-align: center;">59.4</td>
+<td style="text-align: center;">62.3</td>
+<td style="text-align: center;">23.1</td>
+<td style="text-align: center;">34.0</td>
+<td style="text-align: center;">94.7</td>
+<td style="text-align: center;">89.8</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="qualidade_de_vida_files/figure-html/unnamed-chunk-43-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Tanto para o gênero feminino quanto masculino, os índices de qualidade de vida parecem os mesmos. Pode-se observar flutuações tímidas entre as médias, mas todas estão parecidas ainda assim.</p>
+<section id="teste-de-médias-2" class="level4">
+<h4 class="anchored" data-anchor-id="teste-de-médias-2">Teste de médias</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; empty-cells: hide; border-bottom: hidden;"></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px; color: rgba(255, 255, 255, 255) !important; padding-right: 4px; padding-left: 4px; background-color: rgba(47, 85, 151, 255) !important;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Gênero
+</div></th>
+<th data-quarto-table-cell-role="th" style="text-align: center; empty-cells: hide; border-bottom: hidden;"></th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Domínio</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">F</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">M</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">p-valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">EGS</td>
+<td style="text-align: center;">71.4 ± 16.3</td>
+<td style="text-align: center;">67.0 ± 18.5</td>
+<td style="text-align: center;"><span style="     color: rgba(0, 0, 0, 255) !important;">0.23</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">CF</td>
+<td style="text-align: center;">90.0 ± 10.5</td>
+<td style="text-align: center;">86.8 ± 12.3</td>
+<td style="text-align: center;"><span style="     color: rgba(0, 0, 0, 255) !important;">0.1818</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">AF</td>
+<td style="text-align: center;">84.6 ± 21.2</td>
+<td style="text-align: center;">80.6 ± 24.0</td>
+<td style="text-align: center;"><span style="     color: rgba(0, 0, 0, 255) !important;">0.398</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">AE</td>
+<td style="text-align: center;">70.5 ± 33.2</td>
+<td style="text-align: center;">72.9 ± 28.8</td>
+<td style="text-align: center;"><span style="     color: rgba(0, 0, 0, 255) !important;">0.7089</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">AS</td>
+<td style="text-align: center;">86.0 ± 17.2</td>
+<td style="text-align: center;">83.9 ± 14.4</td>
+<td style="text-align: center;"><span style="     color: rgba(0, 0, 0, 255) !important;">0.547</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Dor</td>
+<td style="text-align: center;">76.1 ± 22.9</td>
+<td style="text-align: center;">77.3 ± 19.1</td>
+<td style="text-align: center;"><span style="     color: rgba(0, 0, 0, 255) !important;">0.7924</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">VT</td>
+<td style="text-align: center;">77.6 ± 17.7</td>
+<td style="text-align: center;">76.7 ± 18.9</td>
+<td style="text-align: center;"><span style="     color: rgba(0, 0, 0, 255) !important;">0.8107</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">SM</td>
+<td style="text-align: center;">59.1 ± 17.2</td>
+<td style="text-align: center;">62.2 ± 13.8</td>
+<td style="text-align: center;"><span style="     color: rgba(0, 0, 0, 255) !important;">0.3499</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p><span class="math inline">\(H_0\)</span>: Para um domínio específico, a média é a mesma para ambos os gêneros</p>
+<p><span class="math inline">\(H_1\)</span>: Para um domínio específico, a média dos dois gêneros é diferente</p>
+<p>Para cada domínio foi calculado um teste t-Student de diferença de médias. Nenhum deles mostrou resultados estatisticamente significativos.</p>
+</section>
+</section>
+<section id="qualidade-de-vida-vs-complicações-tardias" class="level3">
+<h3 class="anchored" data-anchor-id="qualidade-de-vida-vs-complicações-tardias">Qualidade de Vida vs Complicações Tardias</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; empty-cells: hide; border-bottom: hidden;"></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px; color: rgba(255, 255, 255, 255) !important; padding-right: 4px; padding-left: 4px; background-color: rgba(47, 85, 151, 255) !important;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Média
+</div></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px; color: rgba(255, 255, 255, 255) !important; padding-right: 4px; padding-left: 4px; background-color: rgba(47, 85, 151, 255) !important;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+DP
+</div></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px; color: rgba(255, 255, 255, 255) !important; padding-right: 4px; padding-left: 4px; background-color: rgba(47, 85, 151, 255) !important;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Mediana
+</div></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px; color: rgba(255, 255, 255, 255) !important; padding-right: 4px; padding-left: 4px; background-color: rgba(47, 85, 151, 255) !important;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Mínimo
+</div></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px; color: rgba(255, 255, 255, 255) !important; padding-right: 4px; padding-left: 4px; background-color: rgba(47, 85, 151, 255) !important;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Máximo
+</div></th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Domínio</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Sim</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Não</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Sim</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Não</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Sim</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Não</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Sim</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Não</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Sim</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Não</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">EGS</td>
+<td style="text-align: center;">68.1</td>
+<td style="text-align: center;">70.5</td>
+<td style="text-align: center;">16.8</td>
+<td style="text-align: center;">19.4</td>
+<td style="text-align: center;">68.1</td>
+<td style="text-align: center;">68.3</td>
+<td style="text-align: center;">20.2</td>
+<td style="text-align: center;">23.1</td>
+<td style="text-align: center;">100.0</td>
+<td style="text-align: center;">100.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">CF</td>
+<td style="text-align: center;">88.2</td>
+<td style="text-align: center;">88.2</td>
+<td style="text-align: center;">11.9</td>
+<td style="text-align: center;">11.1</td>
+<td style="text-align: center;">91.1</td>
+<td style="text-align: center;">90.4</td>
+<td style="text-align: center;">53.6</td>
+<td style="text-align: center;">66.2</td>
+<td style="text-align: center;">100.0</td>
+<td style="text-align: center;">100.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">AF</td>
+<td style="text-align: center;">80.6</td>
+<td style="text-align: center;">85.7</td>
+<td style="text-align: center;">23.5</td>
+<td style="text-align: center;">21.3</td>
+<td style="text-align: center;">88.4</td>
+<td style="text-align: center;">95.0</td>
+<td style="text-align: center;">17.3</td>
+<td style="text-align: center;">19.1</td>
+<td style="text-align: center;">100.0</td>
+<td style="text-align: center;">100.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">AE</td>
+<td style="text-align: center;">70.2</td>
+<td style="text-align: center;">75.0</td>
+<td style="text-align: center;">31.0</td>
+<td style="text-align: center;">30.2</td>
+<td style="text-align: center;">83.7</td>
+<td style="text-align: center;">91.4</td>
+<td style="text-align: center;">0.0</td>
+<td style="text-align: center;">0.0</td>
+<td style="text-align: center;">100.0</td>
+<td style="text-align: center;">100.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">AS</td>
+<td style="text-align: center;">85.7</td>
+<td style="text-align: center;">83.0</td>
+<td style="text-align: center;">14.9</td>
+<td style="text-align: center;">17.0</td>
+<td style="text-align: center;">90.0</td>
+<td style="text-align: center;">84.0</td>
+<td style="text-align: center;">43.0</td>
+<td style="text-align: center;">42.6</td>
+<td style="text-align: center;">100.0</td>
+<td style="text-align: center;">100.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Dor</td>
+<td style="text-align: center;">77.5</td>
+<td style="text-align: center;">75.4</td>
+<td style="text-align: center;">19.7</td>
+<td style="text-align: center;">22.7</td>
+<td style="text-align: center;">80.8</td>
+<td style="text-align: center;">80.2</td>
+<td style="text-align: center;">26.6</td>
+<td style="text-align: center;">33.2</td>
+<td style="text-align: center;">100.0</td>
+<td style="text-align: center;">100.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">VT</td>
+<td style="text-align: center;">75.9</td>
+<td style="text-align: center;">79.2</td>
+<td style="text-align: center;">19.2</td>
+<td style="text-align: center;">16.6</td>
+<td style="text-align: center;">78.1</td>
+<td style="text-align: center;">75.8</td>
+<td style="text-align: center;">25.9</td>
+<td style="text-align: center;">45.0</td>
+<td style="text-align: center;">100.0</td>
+<td style="text-align: center;">100.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">SM</td>
+<td style="text-align: center;">62.1</td>
+<td style="text-align: center;">58.6</td>
+<td style="text-align: center;">14.3</td>
+<td style="text-align: center;">17.1</td>
+<td style="text-align: center;">62.2</td>
+<td style="text-align: center;">60.0</td>
+<td style="text-align: center;">36.6</td>
+<td style="text-align: center;">23.1</td>
+<td style="text-align: center;">94.7</td>
+<td style="text-align: center;">93.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="qualidade_de_vida_files/figure-html/unnamed-chunk-46-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Para os domínios AE e AF, aparenta haver um score maior onde não há complicações. Para AS e SM, parece haver um score maior onde há complicações. Para todos os demais, no geral, os valores são parecidos.</p>
+<section id="teste-de-médias-3" class="level4">
+<h4 class="anchored" data-anchor-id="teste-de-médias-3">Teste de médias</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; empty-cells: hide; border-bottom: hidden;"></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px; color: rgba(255, 255, 255, 255) !important; padding-right: 4px; padding-left: 4px; background-color: rgba(47, 85, 151, 255) !important;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Complicações Tardias
+</div></th>
+<th data-quarto-table-cell-role="th" style="text-align: center; empty-cells: hide; border-bottom: hidden;"></th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Domínio</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Não</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">Sim</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: rgba(255, 255, 255, 255) !important; background-color: rgba(47, 85, 151, 255) !important;">p-valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">EGS</td>
+<td style="text-align: center;">70.5 ± 19.4</td>
+<td style="text-align: center;">68.1 ± 16.8</td>
+<td style="text-align: center;"><span style="     color: rgba(0, 0, 0, 255) !important;">0.559</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">CF</td>
+<td style="text-align: center;">88.2 ± 11.1</td>
+<td style="text-align: center;">88.2 ± 11.9</td>
+<td style="text-align: center;"><span style="     color: rgba(0, 0, 0, 255) !important;">0.9985</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">AF</td>
+<td style="text-align: center;">85.7 ± 21.3</td>
+<td style="text-align: center;">80.6 ± 23.5</td>
+<td style="text-align: center;"><span style="     color: rgba(0, 0, 0, 255) !important;">0.2978</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">AE</td>
+<td style="text-align: center;">75.0 ± 30.2</td>
+<td style="text-align: center;">70.2 ± 31.0</td>
+<td style="text-align: center;"><span style="     color: rgba(0, 0, 0, 255) !important;">0.47</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">AS</td>
+<td style="text-align: center;">83.0 ± 17.0</td>
+<td style="text-align: center;">85.7 ± 14.9</td>
+<td style="text-align: center;"><span style="     color: rgba(0, 0, 0, 255) !important;">0.4486</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Dor</td>
+<td style="text-align: center;">75.4 ± 22.7</td>
+<td style="text-align: center;">77.5 ± 19.7</td>
+<td style="text-align: center;"><span style="     color: rgba(0, 0, 0, 255) !important;">0.6624</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">VT</td>
+<td style="text-align: center;">79.2 ± 16.6</td>
+<td style="text-align: center;">75.9 ± 19.2</td>
+<td style="text-align: center;"><span style="     color: rgba(0, 0, 0, 255) !important;">0.3954</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">SM</td>
+<td style="text-align: center;">58.6 ± 17.1</td>
+<td style="text-align: center;">62.1 ± 14.3</td>
+<td style="text-align: center;"><span style="     color: rgba(0, 0, 0, 255) !important;">0.3267</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p><span class="math inline">\(H_0\)</span>: Para um domínio específico, a média é a mesma independente da presença de complicações</p>
+<p><span class="math inline">\(H_1\)</span>: Para um domínio específico, a média é diferente de acordo com a presença de complicações</p>
+<p>Para cada domínio foi calculado um teste t-Student de diferença de médias. Nenhum deles mostrou resultados estatisticamente significativos.</p>
+</section>
+</section>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<footer>
+
+  
+
+  <center>
+
+  <p style="font-size: 12px">Os dados apresentados neste projeto foram total ou parcialmente anonimizados, simulados ou modificados em relação aos conjuntos originalmente analisados, com o objetivo de preservar a confidencialidade dos participantes, instituições e autores envolvidos.</p>
+
+
+
+  <p style="font-size: 12px">As análises e metodologias permanecem fiéis ao procedimento estatístico aplicado no estudo original, sendo este material apresentado exclusivamente para fins educacionais e demonstrativos de portfólio.</p>
+
+  </center>
+
+  
+
+</footer>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
